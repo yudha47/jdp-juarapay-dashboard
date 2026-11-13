@@ -1,0 +1,16 @@
+node_modules
+.next
+out
+.env
+.env.local
+.git
+.github
+.vscode
+.idea
+.DS_Store
+coverage
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+.env.*
+!.env.example

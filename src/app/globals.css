@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* =====================================================
+   1️⃣ Theme mapping
+   ===================================================== */
+@theme inline {
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-border: var(--border);
+}
+
+/* =====================================================
+   🌞 Light Mode
+   ===================================================== */
+:root {
+    /* Base */
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.15 0 0);
+    --border: oklch(0.92 0 0);
+
+    /* 🎨 PRIMARY (Blue-600 look) */
+    --primary: oklch(0.55 0.22 262); /* biru */
+    --primary-foreground: oklch(0.98 0 0);
+}
+
+/* =====================================================
+   🌙 Dark Mode
+   ===================================================== */
+.dark {
+    --background: oklch(0.15 0 0);
+    --foreground: oklch(0.98 0 0);
+    --border: oklch(1 0 0 / 15%);
+
+    /* 🎨 PRIMARY (lebih terang agar kontras) */
+    --primary: oklch(0.7 0.22 262);
+    --primary-foreground: oklch(0.15 0 0);
+}
+
+/* =====================================================
+   Base layer
+   ===================================================== */
+@layer base {
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+/* =====================================================
+    Components
+   ===================================================== */
+.input {
+  @apply border rounded-lg px-3 py-2 text-sm w-full;
+}
